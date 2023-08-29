@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAMI Music</title>
+    <link rel="preload" href="style/opciones.css" as="style">
+    <link rel="stylesheet" href="style/opciones.css">
+    <link rel="stylesheet" href="style/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="images/JAMI.png" alt="Icono JAMI"></img>
+        <h1>jami<span>music</span></h1>
+        <div id="contenedor_Uphoto">
+            <img id="user_photo" src="images/user.png" alt="foto de usuario"></img>
+        </div>
+    </header>
+
+    <div class="nav_fondo">
+        <nav class="nav_principal">
+            <div class="desplegable" id="menu">
+                <div class="element">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="4" y1="6" x2="20" y2="6" />
+                        <line x1="4" y1="12" x2="20" y2="12" />
+                        <line x1="4" y1="18" x2="20" y2="18" />
+                    </svg>
+                    <a id="menu_element">menu</a>
+                </div>
+                <div class="menu_perfil" id="menu_perfil">
+                    <ul class="lista">
+                        <li>
+                            <button class="opciones_menu" id="bt_extras">Extras</button>
+                        </li>
+                        <li>   
+                            <button class="opciones_menu" id="bt_mapa">Mapa canciones</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="element" id="inicio">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <polyline points="5 12 3 12 12 3 21 12 19 12" />
+                    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                </svg>
+                <a href="#" id="inicio_element">inicio</a>
+            </div>
+            <div class="element" id="biblioteca">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-vocabulary" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M10 19h-6a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1h6a2 2 0 0 1 2 2a2 2 0 0 1 2 -2h6a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-6a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2z" />
+                    <path d="M12 5v16" />
+                    <path d="M7 7h1" />
+                    <path d="M7 11h1" />
+                    <path d="M16 7h1" />
+                    <path d="M16 11h1" />
+                    <path d="M16 15h1" />
+                </svg>
+                <a href="#" id="biblioteca_element">biblioteca</a>
+            </div>
+        </nav>
+        <nav class="nav_configuracion">
+            <div class="element" id="opciones">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-settings" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" />
+                    <circle cx="12" cy="12" r="3" />
+                </svg>
+                <a href="#" id="opciones_element">opciones</a>
+            </div>
+        </nav>
+    </div>
+    <main class="contenedorMain">
+        
+        <div class="opcion">
+            <p class="boton" id="boton_autoplay"></p>
+            <p id="autoplay_element">AUTOPLAY: Reproducir automaticamente las canciones similares cuando se acaben las canciones de una lista.</p>
+            
+        </div>
+        <div class="opcion">
+            <p class="boton" id="boton_conexion"></p>
+            <p id="conexion_element">MODO SIN CONEXIÓN: Escuchar música cuando no esta conectado a la red.</p>
+            
+        </div>
+        <div class="opcion">
+            <p class="boton" id="boton_sonido"></p>
+            <p id="sonido_element">SONIDO ESTÉREO: Escuchar música con calidad de sonido estéreo</p>
+            
+        </div>
+        <div class="opcion" >
+            <p class="boton" id="boton_volumen"></p>
+            <p id="volumen_element">NORMALIZAR VOLUMEN: Igualar el volumen de todas las canciones</p>
+            
+            
+        </div>
+        <div class="opcion" id="modo_color">
+            <p class="boton" id="boton_color"></p>
+            <p id="modo_element">MODO OSCURO/CLARO</p>
+           
+        </div>
+        <div class="opcion" id="cambiar_idioma">
+            <p id="idioma_element">CAMBIAR IDIOMA</p>
+        </div>
+        <div class="opcion">
+            <p id="nosotros_element">SOBRE NOSOTROS</p>
+        </div>
+        <div class="opcion">
+            <p id="cookies_element">POLITICA DE COOKIES</p>
+        </div>
+        <div class="opcion">
+            <p id="privacidad_element">POLITICA DE PRIVACIDAD</p>
+        </div>
+        <div class="opcion">
+            <p id="ayuda_element">AYUDA</p>
+        </div>
+        <div class="opcion" id="cerrar_sesion">
+            <p id="cerrar_element">CERRAR SESIÓN</p>
+        </div>
+
+        
+    </main>
+    <div class="overlay" id="overlay">
+        <div class="ventana" id="ventana_cerrar">
+            <h3 id="sesionC_element">¿Estas seguro de que quieres cerrar sesión?</h3>
+            <button id="si_cerrar">Si</button>
+            <button id="no_cerrar">No</button>
+        </div>
+    </div>
+    <script src="script/menu.js"></script>
+    <script src="script/opciones.js"></script>
+    <script src="script/color.js"></script>
+    <script src="script/idioma.js"></script>
+    <script src="script/lista_menu.js"></script>
+</body>
+</html>

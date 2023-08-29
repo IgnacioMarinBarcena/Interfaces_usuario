@@ -1,0 +1,16 @@
+:root{
+    --azul: #3B5998;
+    --negro: #000000;
+    --blanco: #FFFFFF;
+    --naranja: #E08709;
+    --grisoscuro: #333333;
+    --grisclaro: #E1E1E1;
+    --rojo: #DB4A39;
+    --verde: #71B100;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+

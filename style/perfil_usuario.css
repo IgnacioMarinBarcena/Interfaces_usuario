@@ -1,0 +1,208 @@
+:root{
+    --azul: #3B5998;
+    --negro: #000000;
+    --blanco: #FFFFFF;
+    --naranja: #E08709;
+    --grisoscuro: #333333;
+    --grisclaro: #E1E1E1;
+    --rojo: #DB4A39;
+    --verde: #71B100;
+    --fondo: var(--negro);
+    --letras: var(--blanco);
+    --header: var(--grisoscuro);
+    --letrasH: var(--blanco);
+    --botones: var(--grisclaro);
+}
+
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--fondo);
+}
+
+header {
+    background-color: var(--header);
+    display: flex;
+}
+
+h1 {
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    color: var(--naranja);
+}
+
+h1 span {
+    text-transform: none;
+    margin-left: 1rem;
+}
+
+header img {
+    height: 10rem;
+}
+
+/* Barra de navegación */
+.nav_fondo {
+    background-color: var(--header);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: sticky;
+    top: 0;
+}
+
+nav a{
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    color:var(--letrasH);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.nav_principal {
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.nav_configuracion {
+    grid-column: 4 / 5;
+    display: flex;
+    justify-content: center;
+}
+
+.element {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem 0 2rem;
+}
+
+.element:hover {
+    background-color: var(--naranja);
+}
+#menu_perfil {
+    background-color: var(--naranja);
+    
+}
+
+.lista {
+    margin-top: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+.opciones_menu {
+    background-color: var(--naranja);
+    color: var(--negro);
+    font-size: 1.5rem;
+    border: none;
+    text-indent: initial;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.opciones_menu:hover {
+    cursor: pointer;
+    color: var(--blanco);
+}
+
+/* Main */
+
+.cabecera {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 5rem auto 2rem auto;
+    gap: 2rem;
+
+}
+
+.cabecera p{
+    align-self: baseline;
+    color: var(--fondo);
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: auto;
+    padding: 1rem 2rem;
+    background-color: var(--naranja);
+    border-radius: 2.5rem;
+}
+
+.cabecera p:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.img_album {
+    height: 30rem;
+}
+
+h2 {
+    align-self: center;
+    color: var(--letras);
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.titulo {
+    color: var(--letras);
+    margin: 0;
+    padding: 1rem 0rem 0rem 4rem;
+}
+
+.contenedor {
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Disposición ordenador grande (evitar scroll horizontal en pantallas grandes) */
+@media screen and (min-width: 940px) {
+	.contenedor {
+        overflow-x: hidden;
+    }
+}
+
+.cancion {
+    width: 20%; /*Cambiar a porcentages*/
+    padding: 2rem;
+}
+
+.img_cancion {
+    width: 100%;
+}
+
+.nombre_cancion {
+    text-align: center;
+    color: var(--letras);
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.7rem;
+}
+
+
+/* Footer */
+
+
+h4 {
+    color: var(--letrasH);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+}

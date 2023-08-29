@@ -1,0 +1,308 @@
+:root{
+    --azul: #3B5998;
+    --negro: #000000;
+    --blanco: #FFFFFF;
+    --naranja: #E08709;
+    --grisoscuro: #333333;
+    --grisclaro: #E1E1E1;
+    --rojo: #DB4A39;
+    --verde: #71B100;
+    --fondo: var(--negro);
+    --letras: var(--blanco);
+    --header: var(--grisoscuro);
+    --letrasH: var(--blanco);
+    --botones: var(--grisclaro);
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--fondo);
+}
+
+header {
+    background-color: var(--header);
+    display: flex;
+}
+
+h1 {
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    color: var(--naranja);
+}
+
+h1 span {
+    text-transform: none;
+    margin-left: 1rem;
+}
+
+header img {
+    height: 10rem;
+}
+
+#contenedor_Uphoto {
+    margin-top: 5rem;
+    display: flex;
+    margin-left: auto;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    width: 8rem;
+    height: 8rem;
+}
+
+#user_photo {
+    width: 100%;
+    height: 100%;
+}
+
+#myBuscador {
+    position: absolute;
+    top: 9.5rem;
+    right:14rem;
+    background-color: var(--blanco);
+    opacity: 100%;
+    z-index: 4;
+    margin-top: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+#myInput {
+    width: 30rem;
+}
+
+.item {
+    color: var(--negro);
+}
+
+.item a{
+    font-size: 1.8rem;
+    color: var(--negro);
+    text-decoration: none;
+    margin: 1rem;
+    word-wrap:break-word;
+}
+
+/* Barra de navegación */
+.nav_fondo {
+    background-color: var(--header);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+
+
+nav a{
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    color:var(--letrasH);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.nav_principal {
+    grid-column: 1 / 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nav_configuracion {
+    grid-column: 1 / 5;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media screen and (min-width: 780px) {
+	.nav_fondo {
+        grid-template-rows: auto;
+    }
+
+    .nav_principal {
+        grid-column: 1 / 4;
+        justify-content: space-evenly;
+    }
+
+    .nav_configuracion {
+        grid-column: 4 / 5;
+    }
+
+    #contenedor_Uphoto {
+        margin-top: 0;
+    }
+
+    #myBuscador {
+        top: 4.5rem;
+    }
+}
+
+.element {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem 0 2rem;
+}
+
+.element:hover {
+    background-color: var(--naranja);
+}
+
+/* Main */
+main {
+    background-color: var(--fondo);
+    color: var(--letras);
+}
+
+.contador {
+    display: flex;
+    align-items: center;
+}
+
+.cuenta_atras {
+    margin-left: auto;
+    margin-right: 2rem;
+    font-size: 1.8rem;
+}
+
+.titulo {
+    color: var(--letras);
+    margin: 0;
+    padding: 1rem 0rem 0rem 1rem;
+}
+
+.contenedor {
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Disposición ordenador grande (evitar scroll horizontal en pantallas grandes) */
+@media screen and (min-width: 640px) {
+	.contenedor {
+        overflow-x: hidden;
+    }
+}
+
+.cancion {
+    width: 20%; /*Cambiar a porcentages*/
+    padding: 2rem;
+}
+
+.position {
+    position: relative;
+}
+
+.play {
+    position: absolute;
+    justify-self: center;
+    z-index: 2;
+    width: 10rem;
+    opacity: 0%;
+}
+
+@media screen and (min-width: 640px) {
+	.play {
+        width: 15%;
+    }
+}
+
+@media screen and (min-width: 940px) {
+	.play {
+        width: 17%;
+    }
+}
+
+.play:hover {
+    opacity: 80%;
+}
+
+.img_cancion {
+    width: 10rem;
+}
+
+@media screen and (min-width: 640px) {
+	.img_cancion {
+        width: 100%;
+    }
+}
+#menu_perfil {
+    background-color: var(--naranja);
+    
+}
+
+.lista {
+    margin-top: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+.opciones_menu {
+    background-color: var(--naranja);
+    color: var(--negro);
+    font-size: 1.5rem;
+    border: none;
+    text-indent: initial;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.opciones_menu:hover {
+    cursor: pointer;
+    color: var(--blanco);
+}
+
+.nombre_cancion {
+    text-align: center;
+    color: var(--letras);
+}
+
+#podcast {
+    margin-bottom: 5rem;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+
+/* Footer */
+
+footer {
+    height: 7rem;
+    width: 100%;
+    background-color: var(--header);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    z-index: 3;
+}
+
+h4 {
+    color: var(--letrasH);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+}
+
+audio {
+    width: 45rem;
+}

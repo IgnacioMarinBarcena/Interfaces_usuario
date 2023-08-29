@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAMI Music</title>
+    <link rel="preload" href="style/perfil_usuario.css" as="style">
+    <link rel="stylesheet" href="style/perfil_usuario.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="images/JAMI.png" alt="Icono JAMI"></img>
+        <h1>jami<span>music</span></h1>
+    </header>
+
+    <div class="nav_fondo">
+        <nav class="nav_principal">
+            <div class="desplegable" id="menu">
+                <div class="element">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="4" y1="6" x2="20" y2="6" />
+                        <line x1="4" y1="12" x2="20" y2="12" />
+                        <line x1="4" y1="18" x2="20" y2="18" />
+                    </svg>
+                    <a id="menu_element">menu</a>
+                </div>
+                <div class="menu_perfil" id="menu_perfil">
+                    <ul class="lista">
+                        <li>
+                            <button class="opciones_menu" id="bt_extras">Extras</button>
+                        </li>
+                        <li>   
+                            <button class="opciones_menu" id="bt_mapa">Mapa canciones</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="element" id="inicio">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <polyline points="5 12 3 12 12 3 21 12 19 12" />
+                    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                </svg>
+                <a href="#" id="inicio_element">inicio</a>
+            </div>
+            <div class="element" id="biblioteca">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-vocabulary" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M10 19h-6a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1h6a2 2 0 0 1 2 2a2 2 0 0 1 2 -2h6a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-6a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2z" />
+                    <path d="M12 5v16" />
+                    <path d="M7 7h1" />
+                    <path d="M7 11h1" />
+                    <path d="M16 7h1" />
+                    <path d="M16 11h1" />
+                    <path d="M16 15h1" />
+                </svg>
+                <a href="#" id="biblioteca_element">biblioteca</a>
+            </div>
+        </nav>
+        <nav class="nav_configuracion">
+            <div class="element" id="opciones">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-settings" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" />
+                    <circle cx="12" cy="12" r="3" />
+                </svg>
+                <a href="#" id="opciones_element">opciones</a>
+            </div>
+        </nav>
+    </div>
+    <main>
+        <section class="cabecera">
+            <img class="img_album" src="images/user.png" alt="Cancion">
+            <h2 id="user"></h2>
+            <p id="cambiar_campos">cambiar campos</p>
+        </section>
+        <section >
+            <h3 class="titulo" id="artistasseguidos_element">artistas seguidos</h3>
+            <div id="novedades" class="contenedor">
+                <div class="cancion" id="sabina">
+                    <div class="foto_cancion">
+                        <!--<img class="play" src="images/play.png" alt="Icono Play">-->
+                        <img class="img_cancion" src="images/Artista1.jpg" alt="Cancion">
+                    </div>
+                    <h4 class="nombre_cancion">Joaquin Sabina</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script/menu.js"></script>
+    <script src="script/campos.js"></script>
+    <script src="script/perfil_usuario.js"></script>
+    <script src="script/color.js"></script>
+    <script src="script/idioma.js"></script>
+    <script src="script/lista_menu.js"></script>
+    <script src="script/follow.js"></script>
+    <script src="script/biblioteca.js"></script>
+</body>
+</html>

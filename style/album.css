@@ -1,0 +1,255 @@
+:root{
+    --azul: #3B5998;
+    --negro: #000000;
+    --blanco: #FFFFFF;
+    --naranja: #E08709;
+    --grisoscuro: #333333;
+    --grisclaro: #E1E1E1;
+    --rojo: #DB4A39;
+    --verde: #71B100;
+    --fondo: var(--negro);
+    --letras: var(--blanco);
+    --header: var(--grisoscuro);
+    --letrasH: var(--blanco);
+    --botones: var(--grisclaro);
+}/*Terminar esto de los colores, o sea abajo xd*/
+
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--fondo);
+}
+
+header {
+    background-color: var(--header);
+    display: flex;
+}
+
+h1 {
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    color: var(--naranja);
+}
+
+h1 span {
+    text-transform: none;
+    margin-left: 1rem;
+}
+
+header img {
+    height: 10rem;
+}
+
+/* Barra de navegación */
+.nav_fondo {
+    background-color: var(--header);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: sticky;
+    top: 0;
+}
+
+nav a{
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    color:var(--letrasH);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.nav_principal {
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.nav_configuracion {
+    grid-column: 4 / 5;
+    display: flex;
+    justify-content: center;
+}
+
+.element {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem 0 2rem;
+}
+
+.element:hover {
+    background-color: var(--naranja);
+}
+
+/* Main */
+
+.cabecera {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 5rem auto 2rem auto;
+    gap: 2rem;
+}
+
+.cabecera p{
+    color: var(--letras);
+    font-size: 1.4rem;
+}
+
+.img_album {
+    height: 25rem;
+}
+
+.img_artista {
+    height: 5rem;
+}
+
+.cabecera div {
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    margin-left: auto;
+}
+
+h2 {
+    align-self: center;
+    color: var(--letras);
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.controles {
+    display: flex;
+    width: 70%;
+    margin: 1rem auto;
+    align-items: center;
+    gap: 2rem;
+}
+
+.control {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.play {
+    background-color: var(--grisclaro);
+}
+
+.like {
+    background-color: var(--rojo);
+}
+
+.informacion {
+    width: 70%;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    align-items: flex-end;
+}
+
+.informacion p {
+    text-transform: uppercase;
+    color: var(--blanco);
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.informacion svg {
+    margin-left: auto;
+}
+
+.divisor {
+    width: 85%;
+    margin: 0 auto 2rem auto;
+    display: flex;
+    align-items: center;
+}
+
+.divisor hr {
+    width: 100%;
+}
+
+.divisor span {
+    content: "\2022";
+    color: var(--blanco);
+    font-size: 2rem;
+}
+
+.cancion {
+    margin: 2rem auto;
+    height: 6rem;
+    width: 80%;
+    background-color: var(--grisoscuro);
+    border-style: solid;
+    border-color: var(--grisclaro);
+    border-width: 0.1rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.nombre {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nombre h4 {
+    font-size: 1.6rem;
+    color: var(--grisclaro);
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nombre h5 {
+    padding-left: 1rem;
+    font-size: 1.3rem;
+    color: var(--grisclaro);
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.cancion p {
+    font-size: 1.5rem;
+    color: var(--grisclaro);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+/* Footer */
+
+footer {
+    height: 7rem;
+    width: 100%;
+    background-color: var(--grisoscuro);
+    position: fixed;
+    bottom: 0;
+}
+
+h4 {
+    color: var(--blanco);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+}
